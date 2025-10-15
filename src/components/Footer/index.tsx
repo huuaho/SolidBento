@@ -14,7 +14,7 @@ const Footer: Component = () => {
 							<For each={upperfooter.links}>
 								{(column) => (
 									<details class="border-b border-black">
-										<summary class="font-semibold px-4 py-3 cursor-pointer">
+										<summary class="text-sm font-semibold px-4 py-3 cursor-pointer">
 											{column.title}
 										</summary>
 										<ul class="space-y-2 px-10 pb-4">
@@ -29,12 +29,15 @@ const Footer: Component = () => {
 																	href={item.href}
 																	target="_blank"
 																	rel="noopener noreferrer"
-																	class="hover:underline"
+																	class="hover:underline text-sm"
 																>
 																	{item.text}
 																</a>
 															) : (
-																<A href={item.href} class="hover:underline">
+																<A
+																	href={item.href}
+																	class="hover:underline text-sm"
+																>
 																	{item.text}
 																</A>
 															)}
@@ -51,7 +54,7 @@ const Footer: Component = () => {
 							<For each={upperfooter.links}>
 								{(column) => (
 									<div>
-										<p class="font-semibold mb-3">{column.title}</p>
+										<p class="font-semibold mb-3 text-sm">{column.title}</p>
 										<ul class="space-y-2">
 											<For each={column.items}>
 												{(item) => {
@@ -64,12 +67,15 @@ const Footer: Component = () => {
 																	href={item.href}
 																	target="_blank"
 																	rel="noopener noreferrer"
-																	class="hover:underline"
+																	class="hover:underline text-sm"
 																>
 																	{item.text}
 																</a>
 															) : (
-																<A href={item.href} class="hover:underline">
+																<A
+																	href={item.href}
+																	class="hover:underline text-sm"
+																>
 																	{item.text}
 																</A>
 															)}
@@ -86,10 +92,8 @@ const Footer: Component = () => {
 
 					{/* RIGHT: newsletter form (≈34%) */}
 					<div class="w-full md:w-1/3 px-4 md:pl-4 md:pr-8 pb-8 sm:pb-0">
-						<h3 class="font-semibold text-2xl mb-3">
-							{upperfooter.form.title}
-						</h3>
-						<p class="mb-4 text-md text-gray-200">
+						<h3 class="font-semibold text-xl mb-3">{upperfooter.form.title}</h3>
+						<p class="mb-4 text-sm text-gray-200">
 							{upperfooter.form.description}
 						</p>
 						<form class="flex flex-col gap-3">
@@ -99,7 +103,7 @@ const Footer: Component = () => {
 							/>
 							<button
 								type="submit"
-								class="bg-[#face00] w-full md:w-fit text-blue-900 font-semibold px-4 py-2 rounded-md hover:bg-[#ddaa01] cursor-pointer"
+								class=" text-sm bg-[#face00] w-full md:w-fit text-blue-900 font-semibold px-4 py-2 rounded-md hover:bg-[#ddaa01] cursor-pointer"
 							>
 								{upperfooter.form.buttonText}
 							</button>
@@ -107,7 +111,7 @@ const Footer: Component = () => {
 					</div>
 				</div>
 			</div>
-			<div class="bg-[#00314b] text-white w-full py-10">
+			<div class="bg-[#00314b] text-white w-full py-4">
 				<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between">
 					<div class="px-4 sm:px-8">
 						<div>
@@ -132,12 +136,12 @@ const Footer: Component = () => {
 													href={item.href}
 													target="_blank"
 													rel="noopener noreferrer"
-													class="hover:underline"
+													class="hover:underline text-sm"
 												>
 													{item.text}
 												</a>
 											) : (
-												<A href={item.href} class="hover:underline">
+												<A href={item.href} class="hover:underline text-sm">
 													{item.text}
 												</A>
 											)}
@@ -146,6 +150,46 @@ const Footer: Component = () => {
 								}}
 							</For>
 						</div>
+					</div>
+				</div>
+				<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between pt-6">
+					<div class="px-4 sm:px-8">
+						<div>
+							<span class="text-xl font-bold">Follow Us</span>
+						</div>
+						<div>
+							<For each={lowerfooter.socialMediaLinks}>
+								{(item) => (
+									<a href={item.href} target="_blank">
+										<img
+											src={item.icon}
+											alt={item.alt}
+											class="inline-block mr-3 pt-3"
+										/>
+									</a>
+								)}
+							</For>
+						</div>
+					</div>
+					<div class="pt-6 lg:pt-0">
+						<For each={lowerfooter.governmentLinks}>
+							{(item) => (
+								<div class="px-4 sm:px-8 pt-0 lg:pt-0 lg:text-right">
+									{item.href ? (
+										<a
+											href={item.href}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="hover:underline text-xs"
+										>
+											{item.text}
+										</a>
+									) : (
+										<span>{item.text}</span>
+									)}
+								</div>
+							)}
+						</For>
 					</div>
 				</div>
 			</div>
