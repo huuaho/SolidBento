@@ -29,7 +29,7 @@ type FooterLinkItem = {
     href: string;
 };
 
-type FooterLinkColumn = {
+type FooterLinkGroup = {
     title: string;
     items: FooterLinkItem[];
 };
@@ -41,8 +41,20 @@ type FooterForm = {
 };
 
 type UpperFooter = {
-    links: FooterLinkColumn[];
+    links: FooterLinkGroup[];
     form: FooterForm;
+};
+
+type FooterIconLink = {
+    icon: string; // this will be the path to the icon image
+    href: string;
+    alt: string;
+};
+
+type LowerFooter = {
+    contactUsLinks: FooterLinkItem[];
+    socialMediaLinks: FooterIconLink[];
+    governmentLinks: FooterLinkItem[];
 };
 
 //export the upperfooter config
@@ -81,4 +93,28 @@ export const upperfooter:UpperFooter = {
         description: "Enter your email address",
         buttonText: "Sign up",
     },
+};
+
+
+
+export const lowerfooter = {
+
+    contactUsLinks: [
+        { text: "NCIChildhoodCancerDataInitiative@mail.nih.gov", href: "mailto:NCIChildhoodCancerDataInitiative@mail.nih.gov" },
+    ],
+    
+    socialMediaLinks: [
+        { icon: "/src/assets/footer/facebook-logo.svg", href: "https://www.facebook.com/cancer.gov", alt: "Facebook Icon" },
+        { icon: "/src/assets/footer/x-logo.svg", href: "https://twitter.com/thenci", alt: "X (Twitter) Icon" },
+        { icon: "/src/assets/footer/instagram-logo.svg", href: "https://www.instagram.com/nationalcancerinstitute/", alt: "Instagram Icon" },
+        { icon: "/src/assets/footer/youtube-logo.svg", href: "https://www.youtube.com/NCIgov", alt: "YouTube Icon" },
+        { icon: "/src/assets/footer/linkedin-logo.svg", href: "https://www.linkedin.com/company/nationalcancerinstitute/", alt: "LinkedIn Icon" },
+    ],
+
+    governmentLinks: [
+        { text: "U.S. Department of Health and Human Services", href: "https://www.hhs.gov" },
+        { text: "National Institutes of Health", href: "https://www.nih.gov" },
+        { text: "National Cancer Institute", href: "https://www.cancer.gov" },
+        { text: "USA.gov", href: "https://www.usa.gov" },
+    ]
 };
