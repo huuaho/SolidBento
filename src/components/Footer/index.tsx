@@ -6,14 +6,14 @@ const Footer: Component = () => {
 	return (
 		<footer>
 			<div class="bg-[#004971] text-white w-full sm:py-10">
-				<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+				<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4">
 					{/* LEFT: 3-column link section (≈66%) */}
 					<div class="w-full md:w-2/3">
 						<div class="sm:hidden">
 							<For each={upperfooter.links}>
 								{(column) => (
-									<details class="border-b border-black ">
-										<summary class="font-semibold px-4 py-3">
+									<details class="border-b border-black">
+										<summary class="font-semibold px-4 py-3 cursor-pointer">
 											{column.title}
 										</summary>
 										<ul class="space-y-2 px-10 pb-4">
