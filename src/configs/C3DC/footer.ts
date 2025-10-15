@@ -79,6 +79,6 @@ export const upperfooter:UpperFooter = {
     form: {
         title: "Sign up for email updates",
         description: "Enter your email address",
-        buttonText: "Sign Up",
+        buttonText: "Sign up",
     },
 };
