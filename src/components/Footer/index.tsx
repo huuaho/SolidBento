@@ -113,7 +113,7 @@ const Footer: Component = () => {
 			</div>
 			<div class="bg-[#00314b] text-white w-full py-4">
 				<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between">
-					<div class="px-4 sm:px-8">
+					<div class="px-4 md:px-8">
 						<div>
 							<span class="text-2xl font-bold">National Cancer Institute</span>
 						</div>
@@ -121,7 +121,7 @@ const Footer: Component = () => {
 							<span class="text-lg">at the National Institutes of Health</span>
 						</div>
 					</div>
-					<div class="px-4 sm:px-8 lg:text-right pt-4 lg:pt-0">
+					<div class="px-4 md:px-8 lg:text-right pt-4 lg:pt-0">
 						<div>
 							<span class="text-xl font-bold">Contact Us</span>
 						</div>
@@ -153,7 +153,7 @@ const Footer: Component = () => {
 					</div>
 				</div>
 				<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between pt-6">
-					<div class="px-4 sm:px-8">
+					<div class="px-4 md:px-8">
 						<div>
 							<span class="text-xl font-bold">Follow Us</span>
 						</div>
@@ -174,7 +174,7 @@ const Footer: Component = () => {
 					<div class="pt-6 lg:pt-0">
 						<For each={lowerfooter.governmentLinks}>
 							{(item) => (
-								<div class="px-4 sm:px-8 pt-0 lg:pt-0 lg:text-right">
+								<div class="px-4 md:px-8 pt-0 lg:pt-0 lg:text-right">
 									{item.href ? (
 										<a
 											href={item.href}

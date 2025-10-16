@@ -41,3 +41,36 @@ The bottom half contains a hard-set value of 'Follow Us' followed by generating 
 On the right we generate a bunch of government links.
 
 The configuration required here are the social media links which also need icons to generate the images and the government links. Although these are configurable, it is not expected that these values would differ much project to project.
+
+### Responsiveness
+
+The footer's responsive behavior copies the behavior found on [https://www.cancer.gov](https://www.cancer.gov)
+
+Responsiveness is based off of Tailwind's breakpoints
+-sm 40rem (640px)
+-md 48rem (768px)
+-lg 64rem (1024px)
+-xl 80rem (1280px)
+-2xl 96rem (1536px)
+
+#### w < 640px (sm)
+
+When the footer is less than the sm breakpoint, the upper footer's links collapses into expandable menus with a bottom border under each section.
+
+The email form is under them with the signup and text field expanding across the whole width
+
+The bottom footer is collapses to into one column being left aligned.
+
+#### 640px (sm) < w < 768px (md)
+
+The upper footer's links goes into a two column mode. The email form is still underneath the links with a border separating the two sections.
+
+#### 768px (md) < w < 1024px (lg)
+
+The upper footer links is still two columns, however the email form is on the right side with the width of the button fitting the content and is left aligned.
+
+#### 1024px (lg) < w
+
+The upper footer's links are straightened into three columns.
+
+The lower footer breaks from one column to two columns with the contact us and government links right aligned.
