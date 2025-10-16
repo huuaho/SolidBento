@@ -1,19 +1,15 @@
 export const upperfooter: UpperFooter = {
+
+    //update links based off html snippet
+    //<div class="footItem"><h6 class="footItemTitle">About</h6><div class="footItemSubtitle"><a class="footItemLink" href="/about">About CCDI Hub</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/research/areas/childhood/childhood-cancer-data-initiative" target="_blank" rel="noopener noreferrer">About CCDI</a></div><div class="footItemSubtitle"><a class="footItemLink" href="mailto:NCIChildhoodCancerDataInitiative@mail.nih.gov">Contact Us</a></div><div class="footItemSubtitle"><a class="footItemLink" href="/release-notes">Release Notes</a></div></div><div class="footItem"><h6 class="footItemTitle">Policies</h6><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/accessibility" target="_blank" rel="noopener noreferrer">Accessibility</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/foia" target="_blank" rel="noopener noreferrer">FOIA</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/privacy-security" target="_blank" rel="noopener noreferrer">Privacy &amp; Security</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" target="_blank" rel="noopener noreferrer">Vulnerability Disclosure</a></div></div>
     links: [
         {
             title: "About",
             items: [
-                { text: "About C3DC", href: "/about" },
+                { text: "About CCDI Hub", href: "/about" },
                 { text: "About CCDI", href: "https://www.cancer.gov/research/areas/childhood/childhood-cancer-data-initiative" },
                 { text: "Contact Us", href: "mailto:NCIChildhoodCancerDataInitiative@mail.nih.gov" },
-                { text: "Release Notes", href: "https://clinicalcommons.ccdi.cancer.gov/release_notes_pdf?existingUser" },
-            ],
-        },
-        {
-            title: "Resources",
-            items: [
-                { text: "C3DC Data Model", href: "https://github.com/CBIIT/c3dc-model" },
-                { text: "Bento", href: "https://cbiit.github.io/bento-docs/master/index.html" },
+                { text: "Release Notes", href: "https://ccdi.cancer.gov/release-notes" },
             ],
         },
         {
@@ -41,9 +37,9 @@ export const lowerfooter: LowerFooter = {
     ],
     
     socialMediaLinks: [
-        { icon: "/src/assets/footer/facebook-logo.svg", href: "https://www.facebook.com/cancer.gov", alt: "Facebook Icon" },
-        { icon: "/src/assets/footer/x-logo.svg", href: "https://twitter.com/thenci", alt: "X (Twitter) Icon" },
         { icon: "/src/assets/footer/instagram-logo.svg", href: "https://www.instagram.com/nationalcancerinstitute/", alt: "Instagram Icon" },
+        { icon: "/src/assets/footer/x-logo.svg", href: "https://twitter.com/thenci", alt: "X (Twitter) Icon" },
+        { icon: "/src/assets/footer/facebook-logo.svg", href: "https://www.facebook.com/cancer.gov", alt: "Facebook Icon" },
         { icon: "/src/assets/footer/youtube-logo.svg", href: "https://www.youtube.com/NCIgov", alt: "YouTube Icon" },
         { icon: "/src/assets/footer/linkedin-logo.svg", href: "https://www.linkedin.com/company/nationalcancerinstitute/", alt: "LinkedIn Icon" },
     ],

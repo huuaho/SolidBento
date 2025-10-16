@@ -1,7 +1,8 @@
 import { For, type Component } from "solid-js";
 import { A } from "@solidjs/router";
-//import { upperfooter, lowerfooter } from "../../configs/C3DC/footer";
-import { upperfooter, lowerfooter } from "../../configs/GC/footer";
+//import { upperfooter, lowerfooter } from "../../configs/c3dc/footer";
+//import { upperfooter, lowerfooter } from "../../configs/gc/footer";
+import { upperfooter, lowerfooter } from "../../configs/ccdi-hub/footer";
 import { isExternalLink } from "../utils";
 
 const generateLink = (
