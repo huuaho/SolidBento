@@ -31,7 +31,10 @@ The lower footer is broken up into two vertical components and those vertical co
 
 ##### First vertical
 
-The top half contains a hard-set values denoting the NCI/NIH on the left side. On the right side is a 'Contact Us' section (name is hard-set) that generates links under need, spreading horizontally, right aligned.
+The top half contains a hard-set values denoting the NCI/NIH on the left side.
+It is also a hyper link to cancer.gov
+
+On the right side is a 'Contact Us' section (name is hard-set) that generates links under need, spreading horizontally, right aligned.
 
 The only configuration required here is the contactUsLinks - an array of objects to create a tags
 

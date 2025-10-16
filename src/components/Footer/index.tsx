@@ -100,14 +100,19 @@ const Footer: Component = () => {
 			</div>
 			<div class="bg-[#00314b] text-white w-full py-4">
 				<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between">
-					<div class="px-4 md:px-8">
+					<a
+						class="px-4 md:px-8"
+						href="https://www.cancer.gov"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<div>
 							<span class="text-2xl font-bold">National Cancer Institute</span>
 						</div>
 						<div>
 							<span class="text-lg">at the National Institutes of Health</span>
 						</div>
-					</div>
+					</a>
 					<div class="px-4 md:px-8 lg:text-right pt-4 lg:pt-0">
 						<div>
 							<span class="text-xl font-bold">Contact Us</span>
