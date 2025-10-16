@@ -1,7 +1,34 @@
 import { For, type Component } from "solid-js";
 import { A } from "@solidjs/router";
-import { upperfooter, lowerfooter } from "../../configs/C3DC/footer";
+//import { upperfooter, lowerfooter } from "../../configs/C3DC/footer";
+import { upperfooter, lowerfooter } from "../../configs/GC/footer";
 import { isExternalLink } from "../utils";
+
+const generateLink = (
+	item: { text: string; href: string },
+	classOverride?: string
+) => {
+	// if href is empty string or not provided, return just text
+	if (!item.href) {
+		return <span class={`text-sm ${classOverride}`}>{item.text}</span>;
+	}
+
+	const isExternal = isExternalLink(item.href);
+	return isExternal ? (
+		<a
+			href={item.href}
+			target="_blank"
+			rel="noopener noreferrer"
+			class={`hover:underline text-sm ${classOverride}`}
+		>
+			{item.text}
+		</a>
+	) : (
+		<A href={item.href} class={`hover:underline text-sm ${classOverride}`}>
+			{item.text}
+		</A>
+	);
+};
 
 const Footer: Component = () => {
 	return (
@@ -22,27 +49,7 @@ const Footer: Component = () => {
 												{(item) => {
 													const isExternal = isExternalLink(item.href);
 
-													return (
-														<li>
-															{isExternal ? (
-																<a
-																	href={item.href}
-																	target="_blank"
-																	rel="noopener noreferrer"
-																	class="hover:underline text-sm"
-																>
-																	{item.text}
-																</a>
-															) : (
-																<A
-																	href={item.href}
-																	class="hover:underline text-sm"
-																>
-																	{item.text}
-																</A>
-															)}
-														</li>
-													);
+													return <li>{generateLink(item)}</li>;
 												}}
 											</For>
 										</ul>
@@ -60,27 +67,7 @@ const Footer: Component = () => {
 												{(item) => {
 													const isExternal = isExternalLink(item.href);
 
-													return (
-														<li>
-															{isExternal ? (
-																<a
-																	href={item.href}
-																	target="_blank"
-																	rel="noopener noreferrer"
-																	class="hover:underline text-sm"
-																>
-																	{item.text}
-																</a>
-															) : (
-																<A
-																	href={item.href}
-																	class="hover:underline text-sm"
-																>
-																	{item.text}
-																</A>
-															)}
-														</li>
-													);
+													return <li>{generateLink(item)}</li>;
 												}}
 											</For>
 										</ul>
@@ -129,24 +116,7 @@ const Footer: Component = () => {
 							<For each={lowerfooter.contactUsLinks}>
 								{(item) => {
 									const isExternal = isExternalLink(item.href);
-									return (
-										<>
-											{isExternal ? (
-												<a
-													href={item.href}
-													target="_blank"
-													rel="noopener noreferrer"
-													class="hover:underline text-sm"
-												>
-													{item.text}
-												</a>
-											) : (
-												<A href={item.href} class="hover:underline text-sm">
-													{item.text}
-												</A>
-											)}
-										</>
-									);
+									return <>{generateLink(item)}</>;
 								}}
 							</For>
 						</div>
@@ -175,18 +145,7 @@ const Footer: Component = () => {
 						<For each={lowerfooter.governmentLinks}>
 							{(item) => (
 								<div class="px-4 md:px-8 pt-0 lg:pt-0 lg:text-right">
-									{item.href ? (
-										<a
-											href={item.href}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="hover:underline text-xs"
-										>
-											{item.text}
-										</a>
-									) : (
-										<span>{item.text}</span>
-									)}
+									{generateLink(item, "text-xs")}
 								</div>
 							)}
 						</For>
