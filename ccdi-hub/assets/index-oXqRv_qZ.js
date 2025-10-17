@@ -1,0 +1,1 @@
+import{t}from"./index-C796LVTd.js";var a=t('<div class="max-w-7xl mx-auto p-8"><h1 class="text-4xl font-bold mb-4">Welcome to C3DC</h1><p class="text-lg text-gray-600">Childhood Cancer Clinical Data Commons');const o=()=>a();export{o as default};
