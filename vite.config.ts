@@ -11,4 +11,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  // Base path will be set via command line flag during build
+  // e.g., vite build --base=/solidbento/gc/
+  base: process.env.BASE_URL || '/',
 });

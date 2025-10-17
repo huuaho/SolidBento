@@ -1,8 +1,6 @@
 import { For, type Component } from "solid-js";
 import { A } from "@solidjs/router";
-//import { upperfooter, lowerfooter } from "../../configs/c3dc/footer";
-//import { upperfooter, lowerfooter } from "../../configs/gc/footer";
-import { upperfooter, lowerfooter } from "../../configs/ccdi-hub/footer";
+import { useProject } from "../../contexts/ProjectContext";
 import { isExternalLink } from "../utils";
 
 const generateLink = (
@@ -32,6 +30,9 @@ const generateLink = (
 };
 
 const Footer: Component = () => {
+	const config = useProject();
+	const { upper: upperfooter, lower: lowerfooter } = config.footer;
+
 	return (
 		<footer>
 			<div class="bg-[#004971] text-white w-full sm:py-10">

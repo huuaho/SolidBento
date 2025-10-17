@@ -1,4 +1,5 @@
 import { upperfooter, lowerfooter } from './footer';
+import { ccdiHubRoutes, ccdiHubNavigation } from './routes';
 import type { ProjectConfig } from '../typings/project';
 
 export const ccdiHubConfig: ProjectConfig = {
@@ -10,8 +11,6 @@ export const ccdiHubConfig: ProjectConfig = {
     lower: lowerfooter,
   },
 
-  routes: [
-    { path: '/', component: 'Home', label: 'Home', inNav: true },
-    { path: '/about', component: 'About', label: 'About', inNav: true },
-  ],
+  routeElements: ccdiHubRoutes,
+  navigation: ccdiHubNavigation,
 };

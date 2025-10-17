@@ -6,7 +6,15 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "dev:c3dc": "VITE_PROJECT=c3dc vite",
+    "dev:gc": "VITE_PROJECT=gc vite",
+    "dev:ccdi-hub": "VITE_PROJECT=ccdi-hub vite",
+    "build": "npm run build:all",
+    "build:all": "npm run build:c3dc && npm run build:gc && npm run build:ccdi-hub && npm run build:landing",
+    "build:c3dc": "VITE_PROJECT=c3dc vite build --outDir=dist/c3dc --base=/solidbento/c3dc/",
+    "build:gc": "VITE_PROJECT=gc vite build --outDir=dist/gc --base=/solidbento/gc/",
+    "build:ccdi-hub": "VITE_PROJECT=ccdi-hub vite build --outDir=dist/ccdi-hub --base=/solidbento/ccdi-hub/",
+    "build:landing": "node scripts/create-landing.js",
     "serve": "vite preview"
   },
   "license": "MIT",

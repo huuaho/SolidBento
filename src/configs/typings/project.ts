@@ -1,9 +1,9 @@
 import type { UpperFooter, LowerFooter } from './footer';
+import type { JSX } from 'solid-js';
 
-export interface RouteConfig {
+export interface NavItem {
   path: string;
-  component: string; // Component name to render
-  label: string; // For navigation
+  label: string;
   inNav: boolean; // Show in main nav?
 }
 
@@ -17,6 +17,9 @@ export interface ProjectConfig {
     lower: LowerFooter;
   };
 
-  // Route configurations
-  routes: RouteConfig[];
+  // Route elements (JSX from routes.tsx)
+  routeElements: JSX.Element[];
+
+  // Navigation metadata for header
+  navigation: NavItem[];
 }

@@ -1,4 +1,5 @@
 import { upperfooter, lowerfooter } from './footer';
+import { c3dcRoutes, c3dcNavigation } from './routes';
 import type { ProjectConfig } from '../typings/project';
 
 export const c3dcConfig: ProjectConfig = {
@@ -10,8 +11,6 @@ export const c3dcConfig: ProjectConfig = {
     lower: lowerfooter,
   },
 
-  routes: [
-    { path: '/', component: 'Home', label: 'Home', inNav: true },
-    { path: '/about', component: 'About', label: 'About', inNav: true },
-  ],
+  routeElements: c3dcRoutes,
+  navigation: c3dcNavigation,
 };

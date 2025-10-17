@@ -1,4 +1,5 @@
 import { upperfooter, lowerfooter } from './footer';
+import { gcRoutes, gcNavigation } from './routes';
 import type { ProjectConfig } from '../typings/project';
 
 export const gcConfig: ProjectConfig = {
@@ -10,8 +11,6 @@ export const gcConfig: ProjectConfig = {
     lower: lowerfooter,
   },
 
-  routes: [
-    { path: '/', component: 'Home', label: 'Home', inNav: true },
-    { path: '/about', component: 'About', label: 'About', inNav: true },
-  ],
+  routeElements: gcRoutes,
+  navigation: gcNavigation,
 };
