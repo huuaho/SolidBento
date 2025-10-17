@@ -1,6 +1,6 @@
 import { Component, ParentProps, lazy } from "solid-js";
 import { render } from "solid-js/web";
-import { Router, Route, A } from "@solidjs/router";
+import { HashRouter, Route, A } from "@solidjs/router";
 import "./index.css";
 import Layout from "./Layout";
 
@@ -9,10 +9,10 @@ const Home: Component = lazy(() => import("./pages/Home"));
 
 render(
   () => (
-    <Router root={Layout}>
+    <HashRouter root={Layout}>
       <Route path="/about" component={About} />
       <Route path="/" component={Home} />
-    </Router>
+    </HashRouter>
   ),
   document.getElementById("root")!
 );
