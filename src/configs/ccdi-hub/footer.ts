@@ -1,7 +1,6 @@
-export const upperfooter: UpperFooter = {
+import type { UpperFooter, LowerFooter } from '../typings/footer';
 
-    //update links based off html snippet
-    //<div class="footItem"><h6 class="footItemTitle">About</h6><div class="footItemSubtitle"><a class="footItemLink" href="/about">About CCDI Hub</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/research/areas/childhood/childhood-cancer-data-initiative" target="_blank" rel="noopener noreferrer">About CCDI</a></div><div class="footItemSubtitle"><a class="footItemLink" href="mailto:NCIChildhoodCancerDataInitiative@mail.nih.gov">Contact Us</a></div><div class="footItemSubtitle"><a class="footItemLink" href="/release-notes">Release Notes</a></div></div><div class="footItem"><h6 class="footItemTitle">Policies</h6><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/accessibility" target="_blank" rel="noopener noreferrer">Accessibility</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/foia" target="_blank" rel="noopener noreferrer">FOIA</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/privacy-security" target="_blank" rel="noopener noreferrer">Privacy &amp; Security</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.cancer.gov/policies/disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a></div><div class="footItemSubtitle"><a class="footItemLink" href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" target="_blank" rel="noopener noreferrer">Vulnerability Disclosure</a></div></div>
+export const upperfooter: UpperFooter = {
     links: [
         {
             title: "About",

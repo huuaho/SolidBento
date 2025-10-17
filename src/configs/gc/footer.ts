@@ -1,3 +1,5 @@
+import type { UpperFooter, LowerFooter } from '../typings/footer';
+
 export const upperfooter: UpperFooter = {
     links: [
         {
