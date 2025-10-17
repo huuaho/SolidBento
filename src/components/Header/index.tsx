@@ -18,7 +18,11 @@ const Header: Component = () => {
 					{/* Left: Back to all projects link */}
 					<a
 						href={BASE_PATH.replace(`/${config.name}/`, '/')}
-						class="text-blue-600 hover:underline text-sm"
+						class="text-blue-600 hover:underline text-sm cursor-pointer"
+						onClick={(e) => {
+							e.preventDefault();
+							window.location.href = BASE_PATH.replace(`/${config.name}/`, '/');
+						}}
 					>
 						← All Projects
 					</a>

@@ -42,7 +42,7 @@ const landingHTML = `<!DOCTYPE html>
       <!-- Project Links -->
       <div class="space-y-4">
         <!-- C3DC -->
-        <a href="/solidbento/c3dc/" class="block group">
+        <a href="/SolidBento/c3dc/" class="block group">
           <div class="p-6 bg-gray-50 rounded-xl border-2 border-transparent hover:border-blue-900 hover:bg-blue-900 transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-900 group-hover:text-white mb-2">
               C3DC
@@ -54,7 +54,7 @@ const landingHTML = `<!DOCTYPE html>
         </a>
 
         <!-- GC -->
-        <a href="/solidbento/gc/" class="block group">
+        <a href="/SolidBento/gc/" class="block group">
           <div class="p-6 bg-gray-50 rounded-xl border-2 border-transparent hover:border-blue-900 hover:bg-blue-900 transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-900 group-hover:text-white mb-2">
               General Commons
@@ -66,7 +66,7 @@ const landingHTML = `<!DOCTYPE html>
         </a>
 
         <!-- CCDI Hub -->
-        <a href="/solidbento/ccdi-hub/" class="block group">
+        <a href="/SolidBento/ccdi-hub/" class="block group">
           <div class="p-6 bg-gray-50 rounded-xl border-2 border-transparent hover:border-blue-900 hover:bg-blue-900 transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg">
             <h2 class="text-2xl font-semibold text-gray-900 group-hover:text-white mb-2">
               CCDI Hub

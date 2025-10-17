@@ -41,11 +41,11 @@ export const lowerfooter: LowerFooter = {
     ],
     
     socialMediaLinks: [
-        { icon: "/src/assets/footer/instagram-logo.svg", href: "https://www.instagram.com/nationalcancerinstitute/", alt: "Instagram Icon" },
-        { icon: "/src/assets/footer/x-logo.svg", href: "https://twitter.com/thenci", alt: "X (Twitter) Icon" },
-        { icon: "/src/assets/footer/facebook-logo.svg", href: "https://www.facebook.com/cancer.gov", alt: "Facebook Icon" },
-        { icon: "/src/assets/footer/youtube-logo.svg", href: "https://www.youtube.com/NCIgov", alt: "YouTube Icon" },
-        { icon: "/src/assets/footer/linkedin-logo.svg", href: "https://www.linkedin.com/company/nationalcancerinstitute/", alt: "LinkedIn Icon" },
+        { icon: "assets/footer/instagram-logo.svg", href: "https://www.instagram.com/nationalcancerinstitute/", alt: "Instagram Icon" },
+        { icon: "assets/footer/x-logo.svg", href: "https://twitter.com/thenci", alt: "X (Twitter) Icon" },
+        { icon: "assets/footer/facebook-logo.svg", href: "https://www.facebook.com/cancer.gov", alt: "Facebook Icon" },
+        { icon: "assets/footer/youtube-logo.svg", href: "https://www.youtube.com/NCIgov", alt: "YouTube Icon" },
+        { icon: "assets/footer/linkedin-logo.svg", href: "https://www.linkedin.com/company/nationalcancerinstitute/", alt: "LinkedIn Icon" },
     ],
 
     governmentLinks: [

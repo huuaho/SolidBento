@@ -11,15 +11,17 @@
     "dev:ccdi-hub": "VITE_PROJECT=ccdi-hub vite",
     "build": "npm run build:all",
     "build:all": "npm run build:c3dc && npm run build:gc && npm run build:ccdi-hub && npm run build:landing",
-    "build:c3dc": "VITE_PROJECT=c3dc vite build --outDir=dist/c3dc --base=/solidbento/c3dc/",
-    "build:gc": "VITE_PROJECT=gc vite build --outDir=dist/gc --base=/solidbento/gc/",
-    "build:ccdi-hub": "VITE_PROJECT=ccdi-hub vite build --outDir=dist/ccdi-hub --base=/solidbento/ccdi-hub/",
+    "build:c3dc": "VITE_PROJECT=c3dc vite build --outDir=dist/c3dc --base=/SolidBento/c3dc/",
+    "build:gc": "VITE_PROJECT=gc vite build --outDir=dist/gc --base=/SolidBento/gc/",
+    "build:ccdi-hub": "VITE_PROJECT=ccdi-hub vite build --outDir=dist/ccdi-hub --base=/SolidBento/ccdi-hub/",
     "build:landing": "node scripts/create-landing.js",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "license": "MIT",
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "gh-pages": "^6.3.0",
     "solid-devtools": "^0.34.3",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
